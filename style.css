@@ -29,7 +29,7 @@ body {
     font-weight: bold;
 }
 
-.form__fieldset--brake {
+.form__fieldset--last {
     margin-top: 10px;
 }
 
@@ -50,4 +50,12 @@ body {
     border: none;
     width: 100px;
     font-family: "Kanit", sans-serif;
+}
+
+.list {
+    background-color: white;
+    border: none;
+    margin: 2px;
+    padding: 20px;
+    font-weight: bold;
 }
