@@ -29,6 +29,7 @@
             htmlString += `
                 <li ${task.done ? " style=\"text-decoration: line-through\"" : ""}>
                 ${task.content}
+                <img src="bin.png" height= 30px width= 30px>
                 </li>
             `;
         }
