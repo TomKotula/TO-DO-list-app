@@ -10,6 +10,11 @@
 
         render();
     };
+    
+    const removeTask = (taskIndex) => {
+        tasks.splice(taskIndex, 1);
+        render();
+    } 
 
     const tasks = [
         {
@@ -29,12 +34,21 @@
             htmlString += `
                 <li ${task.done ? " style=\"text-decoration: line-through\"" : ""}>
                 ${task.content}
-                <img src="bin.png" height= 30px width= 30px>
+                <img class="js-remove" src="bin.png" height= 30px width= 30px>
                 </li>
             `;
         }
 
         document.querySelector(".js-tasks").innerHTML = htmlString;
+
+        const removeIcons = document.querySelectorAll(".js-remove");
+        console.log(removeIcons);
+
+        removeIcons.forEach((removeIcon, taskIndex) => {
+            removeIcon.addEventListener("click", () => {
+                removeTask(taskIndex);
+            });
+        });
     };
 
     const onFormSubmit = (event) => {
