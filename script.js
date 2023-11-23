@@ -21,28 +21,21 @@
         render();
     };
 
-    const tasks = [
-        {
-            content: "Nagrać lekcję",
-            done: false,
-        },
-        {
-            content: "Zjesc piergoi",
-            done: true,
-        },
-    ];
+    const tasks = [];
 
     const render = () => {
         let htmlString = "";
 
         for (const task of tasks) {
             htmlString += `
-                <li ${task.done ? " style=\"text-decoration: line-through\"" : ""}
-                >
-                <button class="js-done">Done</button>
-                ${task.content}
-                <img class="js-remove" src="bin.png" height= 30px width= 30px>
-                </li>
+            <li class="flex__listItem">
+            <button class="js-done"></button>
+            <div class="js-content">
+            ${task.content}
+            </div>
+            ${task.done ? '<img src="bin.png" class="js-correctIcon">' : ''}
+            <img class="js-remove" src="bin.png">
+        </li>
             `;
         }
 
