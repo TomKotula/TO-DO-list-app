@@ -29,11 +29,12 @@
         for (const task of tasks) {
             htmlString += `
             <li class="flex__listItem">
-            <button class="js-done"></button>
+            <button class="js-done">
+            ${task.done ? '<img src="checkmark.png" class="js-checkmarkIcon">' : ''}
+            </button>
             <div class="js-content">
             ${task.content}
             </div>
-            ${task.done ? '<img src="checkmark.png" class="js-checkmarkIcon">' : ''}
             <img class="js-remove" src="bin.png">
         </li>
             `;
