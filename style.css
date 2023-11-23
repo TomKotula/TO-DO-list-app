@@ -30,7 +30,7 @@ body {
 }
 
 .form__fieldset--last {
-    margin-top: 10px;
+    margin: 10px 2px 0px 2px;
 }
 
 .form__input {
@@ -52,10 +52,40 @@ body {
     font-family: "Kanit", sans-serif;
 }
 
-.list {
+.flex__list {
     background-color: white;
-    border: none;
-    margin: 2px;
-    padding: 20px;
-    font-weight: bold;
+    margin: 1.5px 2px 2px 2px;
+    padding: 30px;
+    list-style-type: none;
 }
+
+.flex__listItem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    border-bottom: 1.5px solid #e2e0e0;
+}
+
+.js-done {
+    background-color: green;
+    height: 30px;
+    width: 30px;
+    border: none;
+}
+
+.js-content {
+    flex-grow: 1;
+    padding-left: 10px;
+}
+
+.js-remove {
+    height: 30px; 
+    width: 30px;
+}
+
+.js-correctIcon {
+    height: 30px;
+    width: 30px;
+}
+
