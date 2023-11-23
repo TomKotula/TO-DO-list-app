@@ -33,7 +33,7 @@
             <div class="js-content">
             ${task.content}
             </div>
-            ${task.done ? '<img src="bin.png" class="js-correctIcon">' : ''}
+            ${task.done ? '<img src="checkmark.png" class="js-checkmarkIcon">' : ''}
             <img class="js-remove" src="bin.png">
         </li>
             `;
