@@ -43,6 +43,12 @@ body {
     color: #bebdbd;
 }
 
+@media (max-width: 767px) {
+    .form__input  {
+        width: 100%;
+    }
+}
+
 .form__button {
     background-color: rgb(39, 124, 124);
     color: white;
@@ -50,6 +56,13 @@ body {
     border: none;
     width: 100px;
     font-family: "Kanit", sans-serif;
+}
+
+@media (max-width: 767px) {
+    .form__button {
+        width: 100%;
+        margin-top: 10px;
+    }
 }
 
 .flex__list {
