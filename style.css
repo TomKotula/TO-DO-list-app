@@ -44,7 +44,19 @@ body {
 }
 
 @media (max-width: 767px) {
-    .form__input  {
+    .form__input {
+        width: 100%;
+    }
+}
+
+@media (max-width: 992px) {
+    .form__input {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .form__input {
         width: 100%;
     }
 }
@@ -64,6 +76,21 @@ body {
         margin-top: 10px;
     }
 }
+
+@media (max-width: 992px) {
+    .form__button {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .form__button {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+
 
 .flex__list {
     background-color: white;
