@@ -68,12 +68,14 @@ body {
     border: none;
     width: 100px;
     font-family: "Kanit", sans-serif;
+    margin-left: 20px;
 }
 
 @media (max-width: 767px) {
     .form__button {
         width: 100%;
         margin-top: 10px;
+        margin-left: 0px;
     }
 }
 
@@ -81,6 +83,7 @@ body {
     .form__button {
         width: 100%;
         margin-top: 10px;
+        margin-left: 0px;
     }
 }
 
@@ -88,6 +91,7 @@ body {
     .form__button {
         width: 100%;
         margin-top: 10px;
+        margin-left: 0px;
     }
 }
 
