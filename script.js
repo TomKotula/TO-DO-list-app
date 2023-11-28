@@ -85,9 +85,8 @@
         form.addEventListener("submit", onFormSubmit);
 
         addButton.addEventListener("click", () => {
-            // Sprawdź, czy pole input jest puste
+            
             if (newTaskInput.value.trim() === "") {
-                // Ustaw fokus na polu input
                 newTaskInput.focus();
             }
         });
