@@ -44,6 +44,10 @@ body {
 }
 
 @media (max-width: 767px) {
+    .container {
+        margin: 20px;
+        max-width: 100%;
+    }
     .form__input {
         width: 100%;
     }
@@ -121,6 +125,38 @@ body {
 .js-content {
     flex-grow: 1;
     padding-left: 10px;
+}
+
+@media (max-width: 550px) {
+    .js-content {
+        word-wrap: break-word;
+        overflow: hidden;
+        width: 195px;
+    }
+}
+
+@media (max-width: 767px) {
+    .js-content {
+        word-wrap: break-word;
+        overflow: hidden;
+        width: 195px;
+    }
+}
+
+@media (max-width: 992px) {
+    .js-content {
+        word-wrap: break-word;
+        overflow: hidden;
+        width: 195px;
+    }
+}
+
+@media (max-width: 1280px) {
+    .js-content {
+        word-wrap: break-word;
+        overflow: hidden;
+        width: 195px;
+    }
 }
 
 .js-remove {
