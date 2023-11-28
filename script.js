@@ -79,8 +79,18 @@
         welcome();
 
         const form = document.querySelector(".js-form");
+        const newTaskInput = document.querySelector(".js-newTask");
+        const addButton = document.querySelector(".form__button");
 
         form.addEventListener("submit", onFormSubmit);
+
+        addButton.addEventListener("click", () => {
+            // Sprawdź, czy pole input jest puste
+            if (newTaskInput.value.trim() === "") {
+                // Ustaw fokus na polu input
+                newTaskInput.focus();
+            }
+        });
     };
 
     init();
