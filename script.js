@@ -32,7 +32,7 @@
             <button class="js-done">
             ${task.done ? '<img src="checkmark.png" class="js-checkmarkIcon">' : ''}
             </button>
-            <div class="js-content">
+            <div class="js-content ${task.done ? 'js-contentLineThrough' : ''}">
             ${task.content}
             </div>
             <img class="js-remove" src="bin.png">

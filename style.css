@@ -127,6 +127,10 @@ body {
     padding-left: 10px;
 }
 
+.js-contentLineThrough {
+    text-decoration: line-through;
+}
+
 @media (max-width: 550px) {
     .js-content {
         word-wrap: break-word;
