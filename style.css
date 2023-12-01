@@ -35,7 +35,7 @@ body {
 
 .form__input {
     width: 85%;
-    padding: 6px;
+    padding: 10px;
     border: 1.5px solid #e2e0e0;
 }
 
@@ -68,7 +68,7 @@ body {
 .form__button {
     background-color: rgb(39, 124, 124);
     color: white;
-    padding: 7px;
+    padding: 11px;
     border: none;
     width: 100px;
     margin-left: 20px;
