@@ -36,6 +36,20 @@ body {
     justify-content: space-between;
 }
 
+@media (max-width: 550px) {
+    .form__fieldset--last {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 767px) {
+    .form__fieldset--last {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
 .form__input {
     width: 85%;
     padding: 10px;
@@ -46,7 +60,7 @@ body {
     color: #bebdbd;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 912px) {
     .container {
         margin: 20px;
         max-width: 100%;
@@ -133,7 +147,23 @@ body {
     color: rgb(15, 205, 205);
 }
 
+@media (max-width: 550px) {
+    .js-toggleButtonEvents {
+        padding: 8px;
+        margin-top: 8px;
+        margin: 0 auto;
+        display: block;
+    }
+}
 
+@media (max-width: 767px) {
+    .js-toggleButtonEvents {
+        padding: 8px;
+        margin-top: 8px;
+        margin: 0 auto;
+        display: block;
+    }
+}
 
 .flex__listItem {
     display: flex;
