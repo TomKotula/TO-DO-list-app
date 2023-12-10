@@ -76,6 +76,7 @@ body {
     border: none;
     width: 100px;
     margin-left: 20px;
+    transition: 0.5s;
 }
 
 .form__button:hover {
@@ -144,6 +145,14 @@ body {
     height: 30px;
     width: 30px;
     border: none;
+}
+
+.js-done:hover {
+    background-color: rgb(8, 160, 8);
+}
+
+.js-done:active {
+    background-color: rgb(13, 186, 13);
 }
 
 .js-content {
