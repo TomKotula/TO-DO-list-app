@@ -21,9 +21,10 @@
         render();
     };
 
-    const tasks = [];
+    let tasks = [];
+    let buttonsRendered = false;
 
-    const render = () => {
+    const renderTasks = () => {
         let htmlString = "";
 
         for (const task of tasks) {
@@ -41,6 +42,38 @@
         }
 
         document.querySelector(".js-tasks").innerHTML = htmlString;
+    };
+
+    const renderButtons = () => {
+
+        if (tasks.length === 0) {
+            document.querySelector(".js-toggleButtonEvents").innerHTML = "";
+            return;
+        }
+
+        if (buttonsRendered) {
+            return;
+        }
+
+        let htmlString = "";
+
+        htmlString += `
+            <button class="js-hideCompletedButtons">Hide completed</button>
+            <button class="js-markAllAsDoneButtons">Complete all</button>
+            `;
+
+        document.querySelector(".js-toggleButtonEvents").innerHTML = htmlString;
+    };
+
+    const toggleButtonsEvents = () => {
+
+    };
+
+    const render = () => {
+
+        renderTasks();
+        renderButtons();
+        toggleButtonsEvents();
 
         const removeIcons = document.querySelectorAll(".js-remove");
 
