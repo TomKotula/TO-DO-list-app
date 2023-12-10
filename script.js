@@ -58,8 +58,8 @@
         let htmlString = "";
 
         htmlString += `
-            <button class="js-hideCompletedButtons">Hide completed</button>
-            <button class="js-markAllAsDoneButtons">Complete all</button>
+            <button class="js-toggleButtonEvents js-hideCompletedButtons">Hide completed</button>
+            <button class="js-toggleButtonEvents js-markAllAsDoneButtons">Complete all</button>
             `;
 
         document.querySelector(".js-toggleButtonEvents").innerHTML = htmlString;
