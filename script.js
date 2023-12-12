@@ -25,7 +25,7 @@
         tasks = tasks.map((task, index) => (
             index === taskIndex ? { ...task, done: !task.done } : task
         ));
-        
+
         render();
     };
 
@@ -66,8 +66,8 @@
         let htmlString = "";
 
         htmlString += `
-            <button class="js-toggleButtonEvents js-hideCompletedButton">Hide completed</button>
-            <button class="js-toggleButtonEvents js-markAllAsDoneButton">Complete all</button>
+            <button class="js-toggleButtonEvents js-hideCompletedButton">Hide completed tasks</button>
+            <button class="js-toggleButtonEvents js-markAllButtonsAsDone">Complete all tasks</button>
             `;
 
         document.querySelector(".js-toggleButtonEvents").innerHTML = htmlString;
@@ -75,13 +75,20 @@
 
     const toggleButtonsEvents = () => {
 
+        const markAllTasksAsDone = document.querySelector(".js-toggleButtonEvents.js-markAllButtonsAsDone");
+
+        if (markAllTasksAsDone) {
+            markAllTasksAsDone.addEventListener("click", () => {
+                tasks = tasks.map(task => ({ ...task, done: true }));
+                render();
+            });
+        }
     };
 
     const render = () => {
 
         renderTasks();
         renderButtons();
-        toggleButtonsEvents();
 
         const removeIcons = document.querySelectorAll(".js-remove");
 
@@ -98,6 +105,8 @@
                 toggleTaskDone(taskIndex);
             });
         });
+
+        toggleButtonsEvents();
     };
 
     const onFormSubmit = (event) => {
