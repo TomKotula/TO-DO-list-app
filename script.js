@@ -1,4 +1,7 @@
 {
+    let tasks = [];
+    let hideDoneTasks = false;
+
     const welcome = () => {
         console.log("Welcome everyone searching for a new adventures with HTML, CSS and JS!")
     };
@@ -6,7 +9,7 @@
     const addNewTask = (newTaskContent) => {
         tasks = [
             ...tasks,
-            { content: newTaskContent },
+            { content: newTaskContent, done: false },
         ];
 
         render();
@@ -29,53 +32,18 @@
         render();
     };
 
-    let tasks = [];
-    let buttonsRendered = false;
-
-    const renderTasks = () => {
-        let htmlString = "";
-
-        for (const task of tasks) {
-            htmlString += `
-            <li class="flex__listItem">
-                <button class="js-done">
-                    ${task.done ? '<img src="checkmark.png" class="js-checkmarkIcon">' : ''}
-                </button>
-                <div class="js-content ${task.done ? 'js-contentLineThrough' : ''}">
-                    ${task.content}
-                </div>
-                    <img class="js-remove" src="bin.png">
-            </li>
-            `;
-        }
-
-        document.querySelector(".js-tasks").innerHTML = htmlString;
-    };
-
-    const renderButtons = () => {
-
-        if (tasks.length === 0) {
-            document.querySelector(".js-toggleButtonEvents").innerHTML = "";
-            return;
-        }
-
-        if (buttonsRendered) {
-            return;
-        }
-
-        let htmlString = "";
-
-        htmlString += `
-            <button class="js-toggleButtonEvents js-hideCompletedButton">Hide completed tasks</button>
-            <button class="js-toggleButtonEvents js-markAllButtonsAsDone">Complete all tasks</button>
-            `;
-
-        document.querySelector(".js-toggleButtonEvents").innerHTML = htmlString;
-    };
-
     const toggleButtonsEvents = () => {
 
-        const markAllTasksAsDone = document.querySelector(".js-toggleButtonEvents.js-markAllButtonsAsDone");
+        const hideCompletedTasksButton = document.querySelector(".js-toggleButtonEvents .js-hideCompletedTasksButton");
+
+        if (hideCompletedTasksButton) {
+            hideCompletedTasksButton.addEventListener("click", () => {
+                hideDoneTasks = !hideDoneTasks;
+                render();
+            });
+        }
+
+        const markAllTasksAsDone = document.querySelector(".js-toggleButtonEvents.js-markAllTasksAsDone");
 
         if (markAllTasksAsDone) {
             markAllTasksAsDone.addEventListener("click", () => {
@@ -83,6 +51,42 @@
                 render();
             });
         }
+    };
+
+    const renderTasks = () => {
+        let htmlString = "";
+
+        for (const [index, task] of tasks.entries()) {
+            if (!hideDoneTasks || !task.done) {
+                htmlString += `
+                    <li class="flex__listItem">
+                        <button class="js-done">
+                            ${task.done ? '<img src="checkmark.png" class="js-checkmarkIcon">' : ''}
+                        </button>
+                        <div class="js-content ${task.done ? 'js-contentLineThrough' : ''}">
+                            ${task.content}
+                        </div>
+                        <img class="js-remove" src="bin.png">
+                    </li>
+                `;
+            }
+        }
+
+        document.querySelector(".js-tasks").innerHTML = htmlString;
+    };
+
+    const renderButtons = () => {
+        const toggleButtonEvents = document.querySelector(".js-toggleButtonEvents");
+
+        if (tasks.length === 0) {
+            toggleButtonEvents.innerHTML = "";
+            return;
+        }
+
+        toggleButtonEvents.innerHTML = `
+            <button class="js-toggleButtonEvents js-hideCompletedTasksButton">${hideDoneTasks ? 'Show' : 'Hide'} completed tasks</button>
+            <button class="js-toggleButtonEvents js-markAllTasksAsDone">Complete all tasks</button>
+        `;
     };
 
     const render = () => {
