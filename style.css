@@ -241,3 +241,7 @@ body {
     height: 30px;
     width: 30px;
 }
+
+.js-markAllTasksAsDone:disabled {
+    color: #ccc;
+}

@@ -85,7 +85,9 @@
 
         toggleButtonEvents.innerHTML = `
             <button class="js-toggleButtonEvents js-hideCompletedTasksButton">${hideDoneTasks ? 'Show' : 'Hide'} completed tasks</button>
-            <button class="js-toggleButtonEvents js-markAllTasksAsDone">Complete all tasks</button>
+            <button class="js-toggleButtonEvents js-markAllTasksAsDone"
+            ${tasks.every(({ done }) => done) ? " disabled" : ""}
+            >Complete all tasks</button>
         `;
     };
 
