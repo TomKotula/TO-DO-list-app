@@ -169,6 +169,10 @@ body {
     }
 }
 
+.js-markAllTasksAsDone:disabled {
+    color: #ccc;
+}
+
 .flex__list {
     background-color: white;
     margin: 1.5px 2px 2px 2px;
@@ -251,8 +255,4 @@ body {
 .js-remove {
     height: 30px;
     width: 30px;
-}
-
-.js-markAllTasksAsDone:disabled {
-    color: #ccc;
 }
