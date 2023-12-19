@@ -21,26 +21,24 @@
 
 <body>
     <div class="container">
-        <section>
-            <div class="flex__item">
+        <header class="flex__item">
                 <h1>TO-DO list</h1>
+        </header>
+        <main class="flex__item">
+            <form class="form js-form">
+                <fieldset class="form__fieldset">
+                    <label>Add a new task</label>
+                </fieldset>
+                <fieldset class="form__fieldset">
+                    <input class="form__input js-newTask" type="text" placeholder="What is there to do?">
+                    <button class="form__button">Add a task</button>
+                </fieldset>
+            </form>
+            <div class="section__beforeList section__beforeList--margin">
+                <label>TO-DO list</label>
+                <div class="js-toggleButtonEvents"></div>
             </div>
-            <div class="flex__item">
-                <form class="form js-form">
-                    <fieldset class="form__fieldset">
-                        <label>Add a new task</label>
-                    </fieldset>
-                    <fieldset class="form__fieldset">
-                        <input class="form__input js-newTask" type="text" placeholder="What is there to do?">
-                        <button class="form__button">Add a task</button>
-                    </fieldset>
-                    <fieldset class="form__fieldset form__fieldset--last">
-                        <label>TO-DO list</label>
-                        <div class="js-toggleButtonEvents"></div>
-                    </fieldset>
-                </form>
-            </div>
-        </section>
+        </main>
         <section>
             <ul class="flex__list js-tasks"></ul>
         </section>
