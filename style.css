@@ -72,9 +72,9 @@ body {
 .form__button {
     background-color: rgb(39, 124, 124);
     color: white;
-    padding: 11px;
+    padding: 12px;
     border: none;
-    width: 100px;
+    width: 110px;
     margin-left: 20px;
     transition: 0.5s;
     font-size: 15px;
