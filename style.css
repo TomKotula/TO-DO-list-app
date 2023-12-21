@@ -43,11 +43,11 @@ body {
 .form__input {
     width: 85%;
     padding: 10px;
-    border: 1.5px solid #e2e0e0;
+    border: 2px solid #e2e0e0;
 }
 
 .form__input::placeholder {
-    color: #bebdbd;
+    color: #969696;
 }
 
 @media (max-width: 912px) {
