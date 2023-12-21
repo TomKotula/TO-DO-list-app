@@ -9,7 +9,7 @@ html {
 }
 
 body {
-    font-family: 'Lato', sans-serif;
+    font-family: "Montserrat", sans-serif;
     background-color: #e2e0e0;
 }
 
@@ -34,6 +34,10 @@ body {
     margin: 2px;
     padding: 20px;
     font-weight: bold;
+}
+
+.form__label {
+    font-size: 20px;
 }
 
 .form__input {
@@ -73,6 +77,7 @@ body {
     width: 100px;
     margin-left: 20px;
     transition: 0.5s;
+    font-size: 15px;
 }
 
 .form__button:hover {
@@ -137,10 +142,15 @@ body {
     }
 }
 
+.section__label  {
+    font-size: 20px;
+}
+
 .js-toggleButtonEvents {
     border: none;
     background-color: white;
     color: teal;
+    font-size: 15px;
 }
 
 .js-toggleButtonEvents:hover {
@@ -214,6 +224,7 @@ body {
 .js-content {
     flex-grow: 1;
     padding-left: 10px;
+    font-size: 15px;
 }
 
 @media (max-width: 550px) {
